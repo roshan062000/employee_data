@@ -1,4 +1,6 @@
-<html>
+<?php 
+    include('employeeconn.php');?>
+    <html>
     <head></head>
     <title>Employee Details</title>
     <body>
@@ -46,6 +48,36 @@
             </div>
             
         </form>
+        <h4>Employee Data Table</h4>
+        <style> table, th, td{border:1px solid blue; }
+        </style>
+        <table style="width:50%">
+           <td>
+            <th>Employee Name</th>
+            <th>Employee Number</th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th>Hobbies</th>
+            <th>Father Name</th>
+            </td>
+    
+            <?php
+            $sql_fetchdata="SELECT * FROM `employee_details`";
+            $result=mysqli_query($mysqli,$sql_fetchdata);
+            while($rows=$result->fetch_assoc())
+            {?>
+            <tr>
+                <td><?php echo $rows['employee_id'] ;?></td>
+                <td><?php echo $rows['employee_name']; ?></td>
+                <td><?php echo $rows['employee_number'] ;?></td>
+                <td><?php echo $rows['employee_gender']; ?></td>
+                <td><?php echo $rows['employee_country']; ?></td>
+                <td><?php echo $rows['employee_hobbies']; ?></td>
+                <td><?php echo $rows['father_name']; ?></td>
+             </tr>
+                
+            <?php } ?>
+        </table>
     </body>
 </html>
 
