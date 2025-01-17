@@ -67,12 +67,12 @@
             while($rows=$result->fetch_assoc())
             {?>
             <tr>
-                <td><?php echo $rows['employee_id'] ;?></td>
-                <td><?php echo $rows['employee_name']; ?></td>
-                <td><?php echo $rows['employee_number'] ;?></td>
-                <td><?php echo $rows['employee_gender']; ?></td>
-                <td><?php echo $rows['employee_country']; ?></td>
-                <td><?php echo $rows['employee_hobbies']; ?></td>
+                <td><?php echo $rows['id'] ;?></td>
+                <td><?php echo $rows['name']; ?></td>
+                <td><?php echo $rows['contact'] ;?></td>
+                <td><?php echo $rows['gender']; ?></td>
+                <td><?php echo $rows['country']; ?></td>
+                <td><?php echo $rows['hobbies']; ?></td>
                 <td><?php echo $rows['father_name']; ?></td>
              </tr>
                 

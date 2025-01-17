@@ -21,4 +21,5 @@ if($insertData)
 else{
     echo'not successfull';
 }
+header("Location:employee.php");
 ?>
