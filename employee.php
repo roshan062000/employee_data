@@ -59,13 +59,14 @@
             <th>Country</th>
             <th>Hobbies</th>
             <th>Father Name</th>
+            <th>Action</th>
             </td>
     
             <?php
             $sql_fetchdata="SELECT * FROM `employee_details`";
             $result=mysqli_query($mysqli,$sql_fetchdata);
             while($rows=$result->fetch_assoc())
-            {?>
+            { ?>
             <tr>
                 <td><?php echo $rows['id'] ;?></td>
                 <td><?php echo $rows['name']; ?></td>
@@ -74,6 +75,8 @@
                 <td><?php echo $rows['country']; ?></td>
                 <td><?php echo $rows['hobbies']; ?></td>
                 <td><?php echo $rows['father_name']; ?></td>
+                <td><a href="editdata.php?editid=<?php echo $rows['id'] ;?>">Edit</a> <a href="deletedata.php?deleteid=<?php echo $rows['id'] ;?>">Delete</a></td>
+
              </tr>
                 
             <?php } ?>
